@@ -1,0 +1,39 @@
+//<ОСНОВНОЙ БЛОК>========================================================================
+._arrow {
+  width: 33px;
+  height: 30px;
+  background: url('../img/icons/sr_arrow.png') 0 0 no-repeat;
+  cursor: pointer;
+  @media(min-width: $md2+px) {
+    &:hover {
+      background: url('../img/icons/sl_arrow.png') 0 0 no-repeat;
+    }
+  } 
+} 
+._arrow_prev {
+  transform: rotate(-180deg);
+  @media(min-width: $md2+px) {
+    &:hover {
+      transform: rotate(0deg);
+    }
+  }
+}
+._arrow_next {
+  @media(min-width: $md2+px) {
+    &:hover {
+      transform: rotate(-180deg);
+    }
+  }
+}
+//</ОСНОВНОЙ БЛОК>========================================================================
+
+//<ГОТОВЫЕ КЛАССЫ>========================================================================
+.row::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+.rub::after {
+  content: '₽';
+}
+//</ГОТОВЫЕ КЛАССЫ>========================================================================
