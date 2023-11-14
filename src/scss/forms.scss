@@ -1,0 +1,113 @@
+//<FORM ()>=================================================================
+.form {
+  &__row {
+  }
+  &__column {
+  }
+  &__line {
+  }
+  &__input {
+  }
+  &__button {
+  }
+  &__error {
+  }
+}
+//</FORM>=================================================================
+
+//<BUTTONS (a.btn+tab)>=================================================================
+.btn {
+  display: inline-flex;
+  padding: 0 25px;
+  justify-content: center;
+  align-items: center;
+  height: 39px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #f68038;
+  transition: all 0.3s ease 0s;
+  @media(min-width: 992px) {
+    &:hover {
+      background-color: #f66029;
+    }
+  }
+  &._fw {
+    width: 100%;
+  }
+}
+//</BUTTONS>=================================================================
+
+//<INPUT (inp+tab)>=========================================================
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+textarea {
+  appearance: none;
+}
+.input {
+  border-radius: 0 !important;
+  width: 100%;
+  display: block;
+  padding: 0px 20px;
+  &._focus {
+  }
+  &._error {
+  }
+}
+textarea.input {
+  resize: none;
+  padding: 0;
+}
+//</INPUT>==================================================================
+
+//<CHECKBOX (chk+tab)>==================================
+.checkbox {
+  position: relative;
+  // .checkbox__input
+  &__input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    &:checked + .checkbox__text::before {
+      background: #fff url('../img/icons/check.svg') center no-repeat;
+    }
+  }
+  // .checkbox__text
+  &.__text {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: -0.3px;
+    line-height: calc(20 / 16);
+    cursor: pointer;
+    &::before {
+      content: '';
+      align-self: flex-start;
+      margin: 0px 14px 0px 0;
+      flex: 0 0 20px;
+      left: 0;
+      top: 0;
+      width: 20px;
+      height: 18px;
+      background: #ffffff;
+      border: 1px solid #a7a9ac;
+    }
+  }
+  a {
+    color: #ffffff;
+    text-decoration: underline;
+    @media(min-width: 992px) {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+//</CHECKBOX (chk+tab)>==================================
